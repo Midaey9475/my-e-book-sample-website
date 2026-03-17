@@ -129,6 +129,7 @@ nav > a:hover{
     width: 180px;
     place-content: center;
     border: 2px solid chocolate;
+    background-color: chocolate;
     border-radius: 40px 10px;
     font-weight: 600;
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -136,9 +137,13 @@ nav > a:hover{
 }
 .heroBtns > a:nth-of-type(2){
     border-radius: 10px 40px;
+    background-color: transparent;
 }
 .heroBtns > a:hover{
     transform: rotate(5deg);
+    background-color: transparent;
+}
+.heroBtns > a:nth-of-type(2):hover{
     background-color: #d2691e;
 }
 .chooseTime{
