@@ -1,0 +1,434 @@
+/* fonts.google.com CDN */
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Root file storing the needed font families */
+:root{
+    --headline: "Montserrat", sans-serif;
+    --bodyFont: "Raleway", sans-serif;
+    --menuFont: "Frijole", system-ui;
+}
+/* Page Reset and general styling */
+*{padding: 0;margin: 0;box-sizing: border-box; color: #fff; list-style: none; text-decoration: none; font-family: var(--bodyFont);}
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+/* Hero Section */
+main{
+    height: 100dvh;
+    width: 100dvw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 50px;
+}
+.heroImgWrapper{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20250512/pngtree-rustic-mediterranean-food-border-image_17262225.jpg);
+    background-size: cover;
+    z-index: -1;
+}
+header{
+    border-bottom: 1px solid #d2691e;
+    height: 60px;
+    width: 40%;
+    padding: 0px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d2691e53;
+}
+.logo{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo > img{
+    height: 80%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+nav > ul{
+    display: inherit;
+    gap: 30px;
+}
+nav ul li > a{
+    font-weight: 600;
+}
+nav ul > li:hover{
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translate(1px , 1px);
+    a{
+        color: chocolate;
+    }
+}
+nav > a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0px 16px;
+    border-radius: 10px 16px;
+    background-color: chocolate;
+    font-weight: 600;
+}
+nav > a:hover{
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(1.08);
+}
+/* Hamburger Menu */
+.hamburger{
+    display: none;
+    cursor: pointer;
+    i{color: chocolate; font-size: 2rem;}
+}
+/* Herosection Text */
+.heroSection{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    display: grid;
+    gap: 40px;
+}
+.heroTxt{
+    display: grid;
+    gap: 20px;
+}
+.heroTxt > h1{
+    font-size: 2.8rem;
+    font-family: var(--headline);
+    font-weight: 900;
+    --trig-duration: 3s;
+    --trig-delay: .5s;
+}
+.heroTxt > p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.heroBtns{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.heroBtns > a{
+    height: 40px;
+    width: 180px;
+    place-content: center;
+    border: 2px solid chocolate;
+    border-radius: 40px 10px;
+    font-weight: 600;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    i{margin-right: 8px;}
+}
+.heroBtns > a:nth-of-type(2){
+    border-radius: 10px 40px;
+}
+.heroBtns > a:hover{
+    transform: rotate(5deg);
+    background-color: #d2691e;
+}
+.chooseTime{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    gap: 40px;
+    width: 96%;
+    margin: auto;
+}
+.dayPeriod{
+    box-shadow: 0px 0px 8px 2px #d2691e;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 120px;
+    width: 300px;
+    padding: 16px;
+}
+.periodImg{
+    height: 100%;
+}
+.periodImg > img{
+    height: 100%;
+    max-width: 150px;
+    --trig-duration: 3s;
+}
+.periodTxt{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.periodTxt > strong{
+    font-family: var(--headline);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+/* MENU SECTION */
+section{
+    width: 100dvw;
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto;
+    padding: 80px;
+    gap: 20px;
+}
+.sectionHeader{
+    border-bottom: 2px solid #d2691e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectionHeader > h1{
+    font-family: var(--menuFont);
+    font-size: 2.5rem;
+}
+.menus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.theMenu{
+    position: relative;
+    width: 300px;
+    height: 100%;
+    border-radius: 20px;
+    height: 90%;
+    overflow: hidden;
+}
+.foodImg{
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.foodImg > img{
+    width: 100%;
+    height: 100%;
+}
+.aboutMenu{
+    position: absolute;
+    bottom: 0;
+    height: 30%;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    transition: .5s;
+}
+.aboutMenu > strong{
+    color: #000;
+    font-size: 1.2rem;
+}
+.aboutMenu > p{
+    color: #494949;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+.menuPrice{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #00000093;
+    display: flex;
+    align-items: end;
+    padding: 8px;
+    opacity: 0;
+    transition: .5s;
+}
+.menuPrice > div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.thePrice{
+    line-height: 1.5;
+}
+.thePrice > h4{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.thePrice > strong{
+    font-size: 1.5rem;
+    color: #f9a66a;
+    font-weight: 900;
+}
+.orderMenu{
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    i{color: #d2691e; font-size: 1.2rem;}
+}
+/* MENU HOVER */
+.theMenu:hover{
+    .aboutMenu{
+        bottom: -100%;
+    }
+    .menuPrice{
+        opacity: 1;
+    }
+}
+/* FOOTER */
+footer{
+    height: 80px;
+    width: 100dvw;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+}
+footer > p{
+    color: chocolate;
+    font-size: 1.2rem;
+    font-weight: 600;
+    span{color: chocolate; font-weight: 900;}
+    i{color: chocolate;}
+}
+
+
+/* RESPONSIVE ADJUSTMENT (Media Query) */
+@media all and (max-width: 1400px) {
+    header{
+        width: 50%;
+    }
+    nav{gap: 30px;}
+    section{
+        padding: 80px 20px;
+    }
+    .menus{
+        width: 100%;
+        overflow: auto;
+        justify-content: start;
+        padding: 20px;
+    }
+    .menus > div{
+        min-width: 400px;
+    }
+    .menus::-webkit-scrollbar{
+        appearance: none;
+    }
+    footer{
+        padding: 0px 20px;
+    } 
+}
+@media all and (max-width: 1240px) {
+    footer > p{
+        font-size: .8rem;
+    }
+}
+@media all and (max-width: 1084px) {
+    header{
+        width: 70%;
+    }
+    .heroTxt > h1{
+        font-size: 2rem;
+    }
+    .heroTxt > p{
+        font-size: 1rem;
+    }
+    .periodImg{place-content: center;}
+    .dayPeriod{
+        width: fit-content;
+        padding: 5px;
+    }
+    .periodImg > img{
+        height: 70%;
+    }
+    .periodTxt > em{font-size: .8rem;}
+}
+@media all and (max-width: 824px) {
+    header{
+        width: 100%;
+    }
+    .chooseTime{
+        gap: 20px;
+    }
+    section{
+        height: fit-content;
+        width: 100dvw;
+        padding: 30px 10px;
+    }
+    .menus{
+        width: 100%;
+        display: grid;
+        height: fit-content;
+        grid-template-columns: auto auto;
+        align-items: start;
+        justify-content: center;
+        gap: 16px;
+    }
+    .menus > div{
+        min-width: auto;
+        height: 300px;
+    }
+    footer > p{
+        font-size: .6rem;
+    }  
+}
+@media all and (max-width: 768px) {
+    nav{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .chooseTime{
+        display: none;
+    }
+}
+@media all and (max-width:640px) {
+    .menus{
+        grid-template-columns: auto;
+    }   
+}
+
+@media all and (max-width: 480px) {
+    .heroTxt > h1{
+        font-size: 1.4rem;
+    }
+    .heroTxt > p{
+        font-size: .8rem;
+    }
+    .heroBtns{
+        gap: 20px;
+    }
+    .heroBtns > a{
+        font-size: 1cap;
+        width: 140px;
+    }
+    .sectionHeader > h1{
+        font-size: 1.4rem;
+    }
+    .menus{
+        overflow-x: hidden;
+    }
+    footer{
+        gap: 20px;
+    }
+}
