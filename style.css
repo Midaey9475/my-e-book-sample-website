@@ -148,6 +148,7 @@ nav > a:hover{
     gap: 40px;
     width: 96%;
     margin: auto;
+    justify-content: center;
 }
 .dayPeriod{
     box-shadow: 0px 0px 8px 2px #d2691e;
@@ -430,5 +431,77 @@ footer > p{
     }
     footer{
         gap: 20px;
+    }
+}
+@media all and (max-width: 334px) {
+    .heroBtns{
+        flex-direction: column;
+        align-items: center;
+    }
+    .heroBtns > a{
+        border-radius: 50px;
+    }
+    .heroBtns > a:nth-of-type(2){
+        border-radius: 50px;
+    } 
+}
+/* Query for Landscape View */
+@media all and (max-height: 672px) {
+    .heroSection{
+        gap: 8px;
+    }
+    .heroTxt{
+        gap: 8px;
+    }
+    .heroTxt > h1{
+        font-size: 2rem;
+    }
+    .heroTxt > p{
+        font-size: 1rem;
+    }
+    .chooseTime{
+        display: none;
+    }
+    section{
+        height: fit-content;
+    }
+    .theMenu{
+        height: 80vh;
+    } 
+}
+@media all and (max-height: 492px) {
+    .heroSection{
+        top: 55%;
+    }
+    .heroTxt > h1{
+        font-size: 1.4rem;
+    }
+    .heroTxt > p{
+        font-size: .8rem;
+    }
+    .heroBtns > a{
+        font-size: 1cap;
+        height: 30px;
+        width: 140px;
+    }
+}
+@media all and (max-height: 448px) {
+    header{
+        height: 40px;
+    }
+    nav ul > li > a{
+        font-size: .8rem;
+    }
+    nav > a{
+        font-size: .8rem;
+        height: 30px;
+    }
+}
+@media all and (max-height: 380px) {
+    .heroSection{
+        top: 65%;
+    }
+    .theMenu{
+        height: 100vh;
     }
 }
