@@ -9,6 +9,48 @@
 }
 /* Page Reset and general styling */
 *{padding: 0;margin: 0;box-sizing: border-box; color: #fff; list-style: none; text-decoration: none; font-family: var(--bodyFont);}
+
+/* Note Section */
+.note{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: #00000096;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    z-index: 9999;
+    h1{
+        font-family: var(--headline);
+        font-weight: 900;
+    }
+    a{
+        color: chocolate;
+        font-weight: 600;
+        text-decoration: underline;
+        font-size: 1.2rem;
+    }
+    .closeNote{
+        background-color: chocolate;
+        color: #fff;
+        font-weight: 600;
+        font-family: var(--menuFont);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: fit-content;
+        cursor: pointer;
+    }
+}
+
+
 body{
     background-color: black;
     overflow-x: hidden;
@@ -316,6 +358,7 @@ footer > p{
     span{color: chocolate; font-weight: 900;}
     i{color: chocolate;}
 }
+
 
 
 /* RESPONSIVE ADJUSTMENT (Media Query) */
